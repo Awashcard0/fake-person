@@ -8,7 +8,7 @@
 </head>
 <body>
 <button onclick="start()">Make fake person</button>
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Hello_Hello.png">
+<img id="pic" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Hello_Hello.png">
 <p id="name"></p>
 <p id="age"></p>
 <p id="email"></p>
@@ -18,8 +18,9 @@
       import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
 
       function start() {
+        document.getElementById("pic").innerHTML = faker.image.avatar();
         document.getElementById("name").innerHTML = faker.name.fullName();
-        document.getElementById("name").innerHTML = ""
+        document.getElementById("age").innerHTML = faker.date.birthdate().substring(0,10);
         document.getElementById("email").innerHTML = faker.internet.email();
       }
 </script>
