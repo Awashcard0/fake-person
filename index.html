@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random person gen</title>
+</head>
+<body>
+<button onclick="start()">Make fake person</button>
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Hello_Hello.png">
+<p id="name"></p>
+<p id="age"></p>
+<p id="email"></p>
+<p id="sex"></p>
+</body>
+<script>
+      import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
 
+      function start() {
+        document.getElementById("name").innerHTML = faker.name.fullName();
+        document.getElementById("name").innerHTML = ""
+        document.getElementById("email").innerHTML = faker.internet.email();
+      }
+</script>
+</html>
