@@ -7,21 +7,19 @@
     <title>Random person gen</title>
 </head>
 <body>
-<button onclick="start()">Make fake person</button>
 <p id="pic"></p>
 <p id="name"></p>
 <p id="age"></p>
 <p id="email"></p>
-<p id="sex"></p>
+<p id="gender"></p>
 </body>
-<script>
+<script type="module">
       import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
 
-      function start() {
         document.getElementById("pic").innerHTML = "pic: " + faker.image.avatar();
         document.getElementById("name").innerHTML = "Name: " + faker.name.fullName();
         document.getElementById("age").innerHTML = "Age: " + faker.date.birthdate().substring(0,10);
         document.getElementById("email").innerHTML = "Email:" + faker.internet.email();
-      }
+        document.getElementById("gender").innerHTML = "Gender: " +  faker.name.gender();
 </script>
 </html>
