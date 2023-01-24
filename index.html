@@ -12,6 +12,7 @@
 <p id="age"></p>
 <p id="email"></p>
 <p id="gender"></p>
+<p id="sex"></p>
 <p id="streetAddress"
 </body>
 <script type="module">
@@ -22,6 +23,7 @@
         // document.getElementById("age").innerHTML = "Age: " + faker.date.birthdate().substring(0,10);
         document.getElementById("email").innerHTML = "Email:" + faker.internet.email();
         document.getElementById("gender").innerHTML = "Gender: " +  faker.name.gender();
+        document.getElementById("sex").innerHTML = "Sex: " + faker.name.sex()
         document.getElementById("streetAddress").innerHTML = "Address: " + faker.address.streetAddress(true)
 </script>
 </html>
